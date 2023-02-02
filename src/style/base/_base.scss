@@ -1,0 +1,564 @@
+@import '../variables';
+
+::selection {
+  background: $primary-4;
+  color: $primary-1;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+a:hover {
+  color: $primary-1;
+}
+
+img {
+  user-select: none;
+  max-width: 100%;
+}
+
+.img-cover {
+  object-fit: cover;
+}
+
+.img-contain {
+  object-fit: contain;
+}
+
+.scrollbar-y-hidden {
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+}
+
+.scrollbar-x-hidden {
+  &::-webkit-scrollbar {
+    height: 0;
+  }
+}
+
+// App Layout
+.app-layout {
+  &-bg {
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 270px;
+      background: $b-0;
+    }
+  }
+}
+
+// Card Modal Padding
+.modal-p-24 {
+  .ant-modal-body {
+    padding: 24px;
+  }
+}
+
+// Line Height
+.line-height-normal {
+  line-height: normal;
+}
+
+// Overflow Control
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.overflow-scroll {
+  overflow: scroll;
+}
+
+.overflow-x-auto {
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  &::-webkit-scrollbar {
+    height: 0;
+  }
+}
+
+.overflow-y-auto {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+// Text Overflow
+.text-overflow-ellipsis {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: block;
+}
+
+// Flex Control
+.d-flex {
+  display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.d-flex-center {
+  display: flex !important;
+  align-items: center;
+}
+
+.d-flex-full-center {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.d-flex-between {
+  justify-content: space-between;
+}
+
+.d-flex-end {
+  justify-content: flex-end;
+}
+
+.d-flex-justify-center {
+  justify-content: center;
+}
+
+.d-flex-column {
+  flex-direction: column;
+}
+
+.d-block {
+  display: block;
+}
+
+.d-inline {
+  display: inline;
+}
+
+.d-inline-block {
+  display: inline-block;
+}
+
+.d-inline-flex {
+  display: inline-flex;
+}
+
+.primary-shadow {
+  box-shadow: $primary-shadow;
+}
+
+@media #{$sm} {
+  .flex-sm-100 {
+    flex: 0 0 100%;
+  }
+}
+
+// Order
+.order-1 {
+  order: 1;
+}
+
+.order-sm-1 {
+  @media #{$sm} {
+    order: 1;
+  }
+}
+
+// Position
+.position-relative {
+  position: relative;
+}
+
+.position-absolute {
+  position: absolute;
+}
+
+.position-absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.position-absolute-top-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.position-absolute-top-center-left {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  left: 0;
+}
+
+.position-absolute-top-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.position-absolute-bottom-left {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.position-absolute-bottom-right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+// RTL
+html[dir='rtl'] {
+  .position-absolute-top-left {
+    right: 0;
+    left: auto;
+  }
+
+  .position-absolute-top-right {
+    left: 0;
+    right: auto;
+  }
+
+  .position-absolute-bottom-left {
+    right: 0;
+    left: auto;
+  }
+
+  .position-absolute-bottom-right {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: auto;
+  }
+}
+
+// Float
+$float: (
+  'left': 'left',
+  'right': 'right',
+  'none': 'none',
+);
+
+@mixin float-classes($prefix, $list) {
+  @each $key, $value in $list {
+    .#{$prefix}-#{$value} {
+      float: $value;
+    }
+
+    .#{$prefix}-xs-#{$value} {
+      @media #{$xs} {
+        float: $value;
+      }
+    }
+  }
+}
+
+@include float-classes(float, $float);
+
+// Width
+.w-auto {
+  width: auto !important;
+}
+
+.w-100 {
+  width: 100% !important;
+}
+
+// Text Alignment
+.text-xl-left {
+  @media #{$xl} {
+    text-align: left !important;
+  }
+}
+
+.text-lg-left {
+  @media #{$lg} {
+    text-align: left !important;
+  }
+}
+
+.text-md-left {
+  @media #{$md} {
+    text-align: left !important;
+  }
+}
+
+.text-sm-left {
+  @media #{$sm} {
+    text-align: left !important;
+  }
+}
+
+.text-xs-left {
+  @media #{$xs} {
+    text-align: left !important;
+  }
+}
+
+.text-xl-right {
+  @media #{$xl} {
+    text-align: right !important;
+  }
+}
+
+.text-lg-right {
+  @media #{$lg} {
+    text-align: right !important;
+  }
+}
+
+.text-md-right {
+  @media #{$md} {
+    text-align: right !important;
+  }
+}
+
+.text-sm-right {
+  @media #{$sm} {
+    text-align: right !important;
+  }
+}
+
+.text-xs-right {
+  @media #{$xs} {
+    text-align: right !important;
+  }
+}
+
+.text-xl-center {
+  @media #{$xl} {
+    text-align: center !important;
+  }
+}
+
+.text-lg-center {
+  @media #{$lg} {
+    text-align: center !important;
+  }
+}
+
+.text-md-center {
+  @media #{$md} {
+    text-align: center !important;
+  }
+}
+
+.text-sm-center {
+  @media #{$sm} {
+    text-align: center !important;
+  }
+}
+
+.text-xs-center {
+  @media #{$xs} {
+    text-align: center !important;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+// RTL
+html[dir='rtl'] {
+  .text-right {
+    text-align: left !important;
+  }
+
+  .text-left {
+    text-align: right !important;
+  }
+
+  .text-xl-left {
+    @media #{$xl} {
+      text-align: right !important;
+    }
+  }
+
+  .text-lg-left {
+    @media #{$lg} {
+      text-align: right !important;
+    }
+  }
+
+  .text-md-left {
+    @media #{$md} {
+      text-align: right !important;
+    }
+  }
+
+  .text-sm-left {
+    @media #{$sm} {
+      text-align: right !important;
+    }
+  }
+
+  .text-xs-left {
+    @media #{$xs} {
+      text-align: right !important;
+    }
+  }
+
+  .text-xl-right {
+    @media #{$xl} {
+      text-align: left !important;
+    }
+  }
+
+  .text-lg-right {
+    @media #{$lg} {
+      text-align: left !important;
+    }
+  }
+
+  .text-md-right {
+    @media #{$md} {
+      text-align: left !important;
+    }
+  }
+
+  .text-sm-right {
+    @media #{$sm} {
+      text-align: left !important;
+    }
+  }
+
+  .text-xs-right {
+    @media #{$xs} {
+      text-align: left !important;
+    }
+  }
+}
+
+// Height
+.h-auto {
+  height: auto !important;
+}
+
+.h-100 {
+  height: 100% !important;
+}
+
+// Align
+.vertical-align-bottom {
+  vertical-align: bottom;
+}
+
+.vertical-align-middle {
+  vertical-align: middle !important;
+}
+
+.align-self-center {
+  align-self: center;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.align-items-end {
+  align-items: flex-end;
+}
+
+// Z Index
+.z-index {
+  z-index: 1;
+}
+
+// Cursor
+.cursor-pointer {
+  cursor: pointer;
+}
+
+// Transition
+.transition {
+  transition: 0.4s;
+}
+
+// Scale
+html[dir='rtl'] {
+  .rtl-scale-x-n1 {
+    transform: scale(-1, 1);
+  }
+}
+
+// Code
+code {
+  padding: 4px;
+  border-radius: 4px;
+  background: #fff0;
+  margin: 0 1px;
+}
+
+.show-code {
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(0, 20px);
+  transition: 0.5s;
+  text-align: left;
+  direction: ltr;
+
+  &-active {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0, 0);
+  }
+}
+
+// Drag
+.row-dragging {
+  background: #fafafa;
+  border: 1px solid #ccc;
+}
+
+.row-dragging td {
+  padding: 16px;
+}
+
+.row-dragging .drag-visible {
+  visibility: visible;
+}
+
+// Scroll to Top
+.scroll-to-top > div {
+  z-index: 3;
+}
+
+html[dir='rtl'] {
+  .scroll-to-top > div {
+    left: 30px;
+    right: auto !important;
+  }
+}
+
+// Wish Button
+.wish-button {
+  svg {
+    transition: 0.3s;
+  }
+
+  &:hover {
+    svg {
+      transform: scale(1.15);
+    }
+  }
+}

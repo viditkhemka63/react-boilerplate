@@ -1,0 +1,161 @@
+@import '../variables';
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  color: $header-text-color;
+  font-weight: $headings-font-weight;
+}
+
+h1,
+.h1 {
+  font-size: $h1-font-size;
+  line-height: $h1-line-height;
+
+  //   @media screen and (max-width: $screen-sm-max) {
+  //     font-size: $h3-font-size;
+  //     line-height: $h3-line-height;
+  //   }
+}
+
+h2,
+.h2 {
+  font-size: $h2-font-size;
+  line-height: $h2-line-height;
+}
+
+h3,
+.h3 {
+  font-size: $h3-font-size;
+  line-height: $h3-line-height;
+}
+
+h4,
+.h4 {
+  font-size: $h4-font-size;
+  line-height: $h4-line-height;
+}
+
+h5,
+.h5 {
+  font-size: $h5-font-size;
+  line-height: $h5-line-height;
+}
+
+.caption {
+  font-size: $caption;
+  line-height: $caption-line-height;
+  font-weight: $font-weight-medium;
+}
+
+.p1-body {
+  font-size: $p1-body;
+  line-height: $p1-body-line-height;
+  color: $text-color-dark;
+  font-weight: $font-weight-regular;
+}
+
+.p2-body {
+  font-size: $p2-body;
+  line-height: $p2-body-line-height;
+  color: $text-color-dark;
+  font-weight: $font-weight-extraLight;
+}
+
+.button {
+  font-size: $button;
+  line-height: $button-line-height;
+  color: $text-color-dark;
+  font-weight: $font-weight-medium;
+}
+
+.placeholder {
+  font-size: $placeholder;
+  line-height: $placeholder-line-height;
+  color: $text-color-dark;
+  font-weight: $font-weight-light;
+}
+
+.input-description {
+  font-size: $input-description;
+  line-height: $input-description-line-height;
+  color: $text-color-dark;
+  font-weight: $font-weight-medium;
+}
+
+.input-label {
+  font-size: $input-label;
+  line-height: $input-label-line-height;
+  color: $text-color-dark;
+  font-weight: $font-weight-medium;
+}
+
+.badge-text {
+  font-size: $badge-text;
+  line-height: $badge-text-line-height;
+  color: $text-color-dark;
+  font-weight: $font-weight-medium;
+}
+
+// Text
+.text-center {
+  text-align: center;
+}
+
+.text-lowercase {
+  text-transform: lowercase;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+.text-line-through {
+  text-decoration: line-through;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
+// Font Weight
+.font-weight-200 {
+  font-weight: $font-weight-extraLight;
+}
+
+.font-weight-300 {
+  font-weight: $font-weight-light;
+}
+
+.font-weight-400 {
+  font-weight: $font-weight-regular;
+}
+
+.font-weight-500 {
+  font-weight: $font-weight-medium;
+}
+
+.font-weight-600 {
+  font-weight: $font-weight-semiBold;
+}
+
+.font-weight-700 {
+  font-weight: $font-weight-bold;
+}
+
+.font-weight-800 {
+  font-weight: $font-weight-extraBold;
+}

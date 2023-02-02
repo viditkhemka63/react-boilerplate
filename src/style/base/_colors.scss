@@ -1,0 +1,207 @@
+// Color Variables
+$colors: (
+  'primary-1': $primary-1,
+  'primary-2': $primary-2,
+  'primary-3': $primary-3,
+  'primary-4': $primary-4,
+  'secondary-1': $secondary-1,
+  'secondary-2': $secondary-2,
+  'secondary-3': $secondary-3,
+  'secondary-4': $secondary-4,
+  'warning-1': $warning-1,
+  'warning-2': $warning-2,
+  'warning-3': $warning-3,
+  'warning-4': $warning-4,
+  'success-1': $success-1,
+  'success-2': $success-2,
+  'success-3': $success-3,
+  'success-4': $success-4,
+  'danger-1': $danger-1,
+  'danger-2': $danger-2,
+  'danger-3': $danger-3,
+  'danger-4': $danger-4,
+  'info-1': $info-1,
+  'info-2': $info-2,
+  'info-3': $info-3,
+  'info-4': $info-4,
+  'black-0': $b-0,
+  'black-10': $b-10,
+  'black-20': $b-20,
+  'black-40': $b-40,
+  'black-60': $b-60,
+  'black-80': $b-80,
+  'black-100': $b-100,
+  'black-bg': $dark-bg,
+  'primary-gradient': $primary-gradient,
+  'secondary-gradient': $secondary-gradient,
+  'warning-gradient': $warning-gradient,
+  'dark-gradient': $dark-gradient,
+  'success-gradient': $success-gradient,
+  'danger-gradient': $danger-gradient,
+  'info-gradient': $info-gradient,
+);
+
+// Text Color Hover Map
+@mixin text-color-hover-classes($prefix, $list) {
+  @each $key, $value in $list {
+    .hover-#{$prefix}-#{$key} {
+      &:hover {
+        color: $value !important;
+      }
+    }
+  }
+}
+
+@include text-color-hover-classes(text, $colors);
+
+// Text Color Map
+@mixin text-color-classes($prefix, $list) {
+  @each $key, $value in $list {
+    .#{$prefix}-color-#{$key} {
+      color: $value !important;
+    }
+  }
+}
+
+@include text-color-classes(text, $colors);
+
+// Background Color Hover Map
+
+@mixin bg-color-hover-classes($prefix, $list) {
+  @each $key, $value in $list {
+    .hover-#{$prefix}-color-#{$key} {
+      &:hover {
+        background-color: $value !important;
+      }
+    }
+  }
+}
+
+@include bg-color-hover-classes(bg, $colors);
+
+// Background Color Map
+@mixin bg-color-classes($prefix, $list) {
+  @each $key, $value in $list {
+    .#{$prefix}-color-#{$key} {
+      background-color: $value !important;
+    }
+  }
+}
+
+@include bg-color-classes(bg, $colors);
+
+// Background Hover Map
+@mixin bg-hover-classes($prefix, $list) {
+  @each $key, $value in $list {
+    .hover-#{$prefix}-#{$key} {
+      &:hover {
+        background: $value !important;
+      }
+    }
+  }
+}
+
+@include bg-hover-classes(bg, $colors);
+
+// Background Map
+@mixin bg-classes($prefix, $list) {
+  @each $key, $value in $list {
+    .#{$prefix}-#{$key} {
+      background: $value !important;
+    }
+  }
+}
+
+@include bg-classes(bg, $colors);
+
+// Border Color Hover Map
+@mixin border-color-hover-classes($prefix, $list) {
+  @each $key, $value in $list {
+    .hover-#{$prefix}-color-#{$key} {
+      &:hover {
+        border-color: $value !important;
+      }
+    }
+  }
+}
+
+@include border-color-hover-classes(border, $colors);
+
+// Border Color Map
+@mixin border-color-classes($prefix, $list) {
+  @each $key, $value in $list {
+    .#{$prefix}-color-#{$key} {
+      border-color: $value !important;
+    }
+  }
+}
+
+@include border-color-classes(border, $colors);
+
+// Fill Map
+@mixin fill-color-classes($prefix, $list) {
+  @each $key, $value in $list {
+    .#{$prefix}-#{$key} {
+      path,
+      rect,
+      line,
+      circle {
+        fill: $value !important;
+      }
+    }
+  }
+}
+
+@include fill-color-classes(fill, $colors);
+
+// Fill Hover Map
+@mixin fill-hover-classes($prefix, $list) {
+  @each $key, $value in $list {
+    .hover-#{$prefix}-#{$key} {
+      &:hover {
+        path,
+        rect,
+        line,
+        circle {
+          fill: $value !important;
+        }
+      }
+    }
+  }
+}
+
+@include fill-hover-classes(fill, $colors);
+
+// Stroke Map
+@mixin stroke-color-classes($prefix, $list) {
+  @each $key, $value in $list {
+    .#{$prefix}-#{$key} {
+      path,
+      rect,
+      line,
+      circle {
+        stroke: $value !important;
+      }
+    }
+  }
+}
+
+@include stroke-color-classes(stroke, $colors);
+
+// Stroke Hover Map
+@mixin stroke-hover-classes($prefix, $list) {
+  @each $key, $value in $list {
+    .hover-#{$prefix}-#{$key} {
+      &:hover {
+        path,
+        rect,
+        line,
+        circle {
+          stroke: $value !important;
+        }
+      }
+    }
+  }
+}
+
+@include stroke-hover-classes(stroke, $colors);

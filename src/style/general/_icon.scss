@@ -1,0 +1,7 @@
+@import '../variables';
+
+.icon-card {
+  &:hover {
+    box-shadow: $input-focus;
+  }
+}

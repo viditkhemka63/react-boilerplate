@@ -1,0 +1,138 @@
+@import "../variables";
+
+.logo {
+  height: 40px;
+}
+
+.mobile-sidebar {
+  display: none;
+
+  .ant-drawer-header {
+    border: none;
+    padding: 16px;
+  }
+
+  .ant-drawer-close {
+    top: 0;
+    transform: translate(0, 0);
+    margin-right: 0;
+    order: 1;
+  }
+
+  .ant-menu-inline .ant-menu-item,
+  .ant-menu-inline .ant-menu-submenu-title {
+    padding-left: 16px !important;
+  }
+}
+
+.ant-menu-inline-collapsed-tooltip a,
+.ant-menu-inline-collapsed-tooltip a:hover {
+  color: $primary-1;
+}
+
+.ant-layout {
+  background: $b-80;
+  color: $white;
+}
+
+.ant-layout .ant-layout-sider {
+  background: $b-100;
+}
+
+.sidebar
+// Horizontal
+.ant-menu-horizontal {
+  li.ant-menu-overflow-item {
+    width: auto !important;
+  }
+}
+
+// Horizontal Dropdown
+.ant-menu-submenu-popup {
+  width: auto !important;
+  padding-left: 0 !important;
+
+  .ant-menu-submenu {
+    padding-left: 0 !important;
+  }
+
+  .ant-menu-submenu-title {
+    padding-left: 12px !important;
+  }
+
+  .ant-menu-submenu-arrow {
+    right: 0 !important;
+  }
+
+  .ant-menu .ant-menu-item {
+    padding-left: 12px;
+  }
+}
+
+@media #{$lg} {
+  .mobile-sidebar {
+    display: block;
+  }
+
+  .sidebar {
+    &.ant-layout-sider {
+      display: none;
+    }
+  }
+
+  .mobile-sidebar {
+    .ant-menu.ant-menu-root.ant-menu-inline {
+      margin-top: 0;
+      position: relative;
+      padding-bottom: 24px;
+      height: 100%;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+
+    .ant-drawer-body {
+      padding: 18px 4px 0;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+// RTL
+.ant-menu-rtl .ant-menu-item .ant-menu-item-icon,
+.ant-menu-rtl .ant-menu-submenu-title .ant-menu-item-icon,
+.ant-menu-rtl .ant-menu-item .remix-icon,
+.ant-menu-rtl .ant-menu-submenu-title .remix-icon {
+  margin-right: 0;
+}
+
+.ant-menu-rtl
+  .ant-menu-submenu-inline
+  > .ant-menu-submenu-title
+  .ant-menu-submenu-arrow {
+  left: 8px !important;
+  right: auto !important;
+}
+
+html[dir="rtl"] {
+  .sidebar {
+    .ant-layout-sider-children {
+      .ant-menu-root {
+        &.ant-menu-inline-collapsed .ant-menu-submenu-title {
+          padding: 0 calc(50% - 24px / 2) !important;
+        }
+
+        .ant-menu-sub .ant-menu-item {
+          padding-left: 24px !important;
+          padding-right: 16px !important;
+        }
+
+        .ant-menu-submenu-title {
+          width: 100%;
+          padding-left: 24px !important;
+          padding-right: 16px !important;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,89 @@
+@import '../variables';
+
+.authentication-page {
+  position: relative;
+  min-height: 100vh;
+  margin: 0 !important;
+  overflow: hidden;
+
+  .logo-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .bg-item {
+    transform: translate(0px, -20%);
+
+    @media #{$md} {
+      margin-top: 120px;
+      margin-bottom: 200px !important;
+    }
+
+    @media #{$sm} {
+      margin-top: 40px;
+      margin-bottom: 70px !important;
+    }
+  }
+
+  .text-item {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+
+    @media #{$sm} {
+      position: relative;
+      top: 0%;
+      left: 0;
+      transform: translate(0, 0);
+      margin-top: -30%;
+    }
+  }
+
+  .or-line {
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      height: 1px;
+      transform: translate(0, -50%);
+      background-color: $b-40;
+      z-index: -1;
+    }
+  }
+
+  .other-links {
+    a + a {
+      position: relative;
+      padding-left: 16px;
+      margin-left: 16px;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 49%;
+        left: 0;
+        width: 3px;
+        height: 3px;
+        border-radius: 100%;
+        background-color: $b-80;
+      }
+    }
+  }
+}
+
+// RTL
+html[dir='rtl'] {
+  .authentication-page {
+    .logo-item {
+      right: 0;
+      left: auto;
+    }
+  }
+}

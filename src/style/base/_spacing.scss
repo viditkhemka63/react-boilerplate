@@ -1,0 +1,544 @@
+@import '../variables';
+
+$spacing: (
+  '0': 0px,
+  '4': 4px,
+  '6': 6px,
+  '8': 8px,
+  '10': 10px,
+  '12': 12px,
+  '16': 16px,
+  '18': 18px,
+  '24': 24px,
+  '32': 32px,
+  '36': 36px,
+  '42': 42px,
+  '48': 48px,
+  '64': 64px,
+  '96': 96px,
+  '120': 120px,
+);
+
+.m-auto {
+  margin: auto !important;
+}
+
+// Margins
+@mixin margin-classes($prefix, $list) {
+  @each $key, $value in $list {
+    .#{$prefix}-#{$key} {
+      margin: $value !important;
+    }
+
+    .#{$prefix}t-#{$key} {
+      margin-top: $value !important;
+    }
+
+    .#{$prefix}b-#{$key} {
+      margin-bottom: $value !important;
+    }
+
+    .#{$prefix}y-#{$key} {
+      margin-bottom: $value !important;
+      margin-top: $value !important;
+    }
+
+    .#{$prefix}x-#{$key} {
+      margin-right: $value !important;
+      margin-left: $value !important;
+    }
+
+    // LTR
+    html[dir='ltr'] {
+      .#{$prefix}l-#{$key} {
+        margin-left: $value !important;
+      }
+
+      .#{$prefix}r-#{$key} {
+        margin-right: $value !important;
+      }
+    }
+  }
+}
+
+@include margin-classes(m, $spacing);
+
+// XL
+@mixin margin-classes-xl($prefix, $list) {
+  @each $key, $value in $list {
+    @media #{$xl} {
+      .#{$prefix}-xl-#{$key} {
+        margin: $value !important;
+      }
+
+      .#{$prefix}t-xl-#{$key} {
+        margin-top: $value !important;
+      }
+
+      .#{$prefix}b-xl-#{$key} {
+        margin-bottom: $value !important;
+      }
+
+      .#{$prefix}y-xl-#{$key} {
+        margin-bottom: $value !important;
+        margin-top: $value !important;
+      }
+
+      .#{$prefix}x-xl-#{$key} {
+        margin-right: $value !important;
+        margin-left: $value !important;
+      }
+    }
+
+    // LTR
+    html[dir='ltr'] {
+      @media #{$xl} {
+        .#{$prefix}l-xl-#{$key} {
+          margin-left: $value !important;
+        }
+
+        .#{$prefix}r-xl-#{$key} {
+          margin-right: $value !important;
+        }
+      }
+    }
+  }
+}
+
+@include margin-classes-xl(m, $spacing);
+
+// LG
+@mixin margin-classes-lg($prefix, $list) {
+  @each $key, $value in $list {
+    @media #{$lg} {
+      .#{$prefix}-lg-#{$key} {
+        margin: $value !important;
+      }
+
+      .#{$prefix}t-lg-#{$key} {
+        margin-top: $value !important;
+      }
+
+      .#{$prefix}b-lg-#{$key} {
+        margin-bottom: $value !important;
+      }
+
+      .#{$prefix}y-lg-#{$key} {
+        margin-bottom: $value !important;
+        margin-top: $value !important;
+      }
+
+      .#{$prefix}x-lg-#{$key} {
+        margin-right: $value !important;
+        margin-left: $value !important;
+      }
+    }
+
+    // LTR
+    html[dir='ltr'] {
+      @media #{$lg} {
+        .#{$prefix}l-lg-#{$key} {
+          margin-left: $value !important;
+        }
+
+        .#{$prefix}r-lg-#{$key} {
+          margin-right: $value !important;
+        }
+      }
+    }
+  }
+}
+
+@include margin-classes-lg(m, $spacing);
+
+// MD
+@mixin margin-classes-md($prefix, $list) {
+  @each $key, $value in $list {
+    @media #{$md} {
+      .#{$prefix}-md-#{$key} {
+        margin: $value !important;
+      }
+
+      .#{$prefix}t-md-#{$key} {
+        margin-top: $value !important;
+      }
+
+      .#{$prefix}b-md-#{$key} {
+        margin-bottom: $value !important;
+      }
+
+      .#{$prefix}y-md-#{$key} {
+        margin-bottom: $value !important;
+        margin-top: $value !important;
+      }
+
+      .#{$prefix}x-md-#{$key} {
+        margin-right: $value !important;
+        margin-left: $value !important;
+      }
+    }
+
+    // LTR
+    html[dir='ltr'] {
+      @media #{$md} {
+        .#{$prefix}l-md-#{$key} {
+          margin-left: $value !important;
+        }
+
+        .#{$prefix}r-md-#{$key} {
+          margin-right: $value !important;
+        }
+      }
+    }
+  }
+}
+
+@include margin-classes-md(m, $spacing);
+
+// SM
+@mixin margin-classes-sm($prefix, $list) {
+  @each $key, $value in $list {
+    @media #{$sm} {
+      .#{$prefix}-sm-#{$key} {
+        margin: $value !important;
+      }
+
+      .#{$prefix}t-sm-#{$key} {
+        margin-top: $value !important;
+      }
+
+      .#{$prefix}b-sm-#{$key} {
+        margin-bottom: $value !important;
+      }
+
+      .#{$prefix}y-sm-#{$key} {
+        margin-bottom: $value !important;
+        margin-top: $value !important;
+      }
+
+      .#{$prefix}x-sm-#{$key} {
+        margin-right: $value !important;
+        margin-left: $value !important;
+      }
+    }
+
+    // LTR
+    html[dir='ltr'] {
+      @media #{$sm} {
+        .#{$prefix}l-sm-#{$key} {
+          margin-left: $value !important;
+        }
+
+        .#{$prefix}r-sm-#{$key} {
+          margin-right: $value !important;
+        }
+      }
+    }
+  }
+}
+
+@include margin-classes-sm(m, $spacing);
+
+// XS
+@mixin margin-classes-xs($prefix, $list) {
+  @each $key, $value in $list {
+    @media #{$xs} {
+      .#{$prefix}-xs-#{$key} {
+        margin: $value !important;
+      }
+
+      .#{$prefix}t-xs-#{$key} {
+        margin-top: $value !important;
+      }
+
+      .#{$prefix}b-xs-#{$key} {
+        margin-bottom: $value !important;
+      }
+
+      .#{$prefix}y-xs-#{$key} {
+        margin-bottom: $value !important;
+        margin-top: $value !important;
+      }
+
+      .#{$prefix}x-xs-#{$key} {
+        margin-right: $value !important;
+        margin-left: $value !important;
+      }
+    }
+
+    // LTR
+    html[dir='ltr'] {
+      @media #{$xs} {
+        .#{$prefix}l-xs-#{$key} {
+          margin-left: $value !important;
+        }
+
+        .#{$prefix}r-xs-#{$key} {
+          margin-right: $value !important;
+        }
+      }
+    }
+  }
+}
+
+@include margin-classes-xs(m, $spacing);
+
+//Paddings
+@mixin padding-classes($prefix, $list) {
+  @each $key, $value in $list {
+    .#{$prefix}-#{$key} {
+      padding: $value !important;
+    }
+
+    .#{$prefix}t-#{$key} {
+      padding-top: $value !important;
+    }
+
+    .#{$prefix}b-#{$key} {
+      padding-bottom: $value !important;
+    }
+
+    .#{$prefix}y-#{$key} {
+      padding-bottom: $value !important;
+      padding-top: $value !important;
+    }
+
+    .#{$prefix}x-#{$key} {
+      padding-right: $value !important;
+      padding-left: $value !important;
+    }
+
+    // LTR
+    html[dir='ltr'] {
+      .#{$prefix}l-#{$key} {
+        padding-left: $value !important;
+      }
+
+      .#{$prefix}r-#{$key} {
+        padding-right: $value !important;
+      }
+    }
+  }
+}
+
+@include padding-classes(p, $spacing);
+
+// XL
+@mixin padding-classes-xl($prefix, $list) {
+  @each $key, $value in $list {
+    @media #{$xl} {
+      .#{$prefix}-xl-#{$key} {
+        padding: $value !important;
+      }
+
+      .#{$prefix}t-xl-#{$key} {
+        padding-top: $value !important;
+      }
+
+      .#{$prefix}b-xl-#{$key} {
+        padding-bottom: $value !important;
+      }
+
+      .#{$prefix}y-xl-#{$key} {
+        padding-bottom: $value !important;
+        padding-top: $value !important;
+      }
+
+      .#{$prefix}x-xl-#{$key} {
+        padding-right: $value !important;
+        padding-left: $value !important;
+      }
+    }
+
+    // LTR
+    html[dir='ltr'] {
+      @media #{$xl} {
+        .#{$prefix}l-xl-#{$key} {
+          padding-left: $value !important;
+        }
+
+        .#{$prefix}r-xl-#{$key} {
+          padding-right: $value !important;
+        }
+      }
+    }
+  }
+}
+
+@include padding-classes-xl(p, $spacing);
+
+// LG
+@mixin padding-classes-lg($prefix, $list) {
+  @each $key, $value in $list {
+    @media #{$lg} {
+      .#{$prefix}-lg-#{$key} {
+        padding: $value !important;
+      }
+
+      .#{$prefix}t-lg-#{$key} {
+        padding-top: $value !important;
+      }
+
+      .#{$prefix}b-lg-#{$key} {
+        padding-bottom: $value !important;
+      }
+
+      .#{$prefix}y-lg-#{$key} {
+        padding-bottom: $value !important;
+        padding-top: $value !important;
+      }
+
+      .#{$prefix}x-lg-#{$key} {
+        padding-right: $value !important;
+        padding-left: $value !important;
+      }
+    }
+
+    // LTR
+    html[dir='ltr'] {
+      @media #{$lg} {
+        .#{$prefix}l-lg-#{$key} {
+          padding-left: $value !important;
+        }
+
+        .#{$prefix}r-lg-#{$key} {
+          padding-right: $value !important;
+        }
+      }
+    }
+  }
+}
+
+@include padding-classes-lg(p, $spacing);
+
+// MD
+@mixin padding-classes-md($prefix, $list) {
+  @each $key, $value in $list {
+    @media #{$md} {
+      .#{$prefix}-md-#{$key} {
+        padding: $value !important;
+      }
+
+      .#{$prefix}t-md-#{$key} {
+        padding-top: $value !important;
+      }
+
+      .#{$prefix}b-md-#{$key} {
+        padding-bottom: $value !important;
+      }
+
+      .#{$prefix}y-md-#{$key} {
+        padding-bottom: $value !important;
+        padding-top: $value !important;
+      }
+
+      .#{$prefix}x-md-#{$key} {
+        padding-right: $value !important;
+        padding-left: $value !important;
+      }
+    }
+
+    // LTR
+    html[dir='ltr'] {
+      @media #{$md} {
+        .#{$prefix}l-md-#{$key} {
+          padding-left: $value !important;
+        }
+
+        .#{$prefix}r-md-#{$key} {
+          padding-right: $value !important;
+        }
+      }
+    }
+  }
+}
+
+@include padding-classes-md(p, $spacing);
+
+// SM
+@mixin padding-classes-sm($prefix, $list) {
+  @each $key, $value in $list {
+    @media #{$sm} {
+      .#{$prefix}-sm-#{$key} {
+        padding: $value !important;
+      }
+
+      .#{$prefix}t-sm-#{$key} {
+        padding-top: $value !important;
+      }
+
+      .#{$prefix}b-sm-#{$key} {
+        padding-bottom: $value !important;
+      }
+
+      .#{$prefix}y-sm-#{$key} {
+        padding-bottom: $value !important;
+        padding-top: $value !important;
+      }
+
+      .#{$prefix}x-sm-#{$key} {
+        padding-right: $value !important;
+        padding-left: $value !important;
+      }
+    }
+
+    // LTR
+    html[dir='ltr'] {
+      @media #{$sm} {
+        .#{$prefix}l-sm-#{$key} {
+          padding-left: $value !important;
+        }
+
+        .#{$prefix}r-sm-#{$key} {
+          padding-right: $value !important;
+        }
+      }
+    }
+  }
+}
+
+@include padding-classes-sm(p, $spacing);
+
+// XS
+@mixin padding-classes-xs($prefix, $list) {
+  @each $key, $value in $list {
+    @media #{$xs} {
+      .#{$prefix}-xs-#{$key} {
+        padding: $value !important;
+      }
+
+      .#{$prefix}t-xs-#{$key} {
+        padding-top: $value !important;
+      }
+
+      .#{$prefix}b-xs-#{$key} {
+        padding-bottom: $value !important;
+      }
+
+      .#{$prefix}y-xs-#{$key} {
+        padding-bottom: $value !important;
+        padding-top: $value !important;
+      }
+
+      .#{$prefix}x-xs-#{$key} {
+        padding-right: $value !important;
+        padding-left: $value !important;
+      }
+    }
+
+    // LTR
+    html[dir='ltr'] {
+      @media #{$xs} {
+        .#{$prefix}l-xs-#{$key} {
+          padding-left: $value !important;
+        }
+
+        .#{$prefix}r-xs-#{$key} {
+          padding-right: $value !important;
+        }
+      }
+    }
+  }
+}
+
+@include padding-classes-xs(p, $spacing);

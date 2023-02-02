@@ -1,0 +1,9 @@
+@import "antd/dist/reset.css";
+
+@import "./variables";
+
+@import "./features/auth";
+@import "./base/index.scss";
+@import "./general/index.scss";
+@import "./dataEntry/index.scss";
+@import "./layouts/index.scss";

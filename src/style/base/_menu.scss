@@ -1,0 +1,9 @@
+@import "../variables";
+
+.ant-menu-dark {
+  background: $b-100;
+}
+
+.ant-menu-dark .ant-menu-item-selected {
+  background-color: $primary-1;
+}
