@@ -1,13 +1,7 @@
-import React, { FC, useState } from "react";
-import { DownOutlined } from "@ant-design/icons";
-import type { RadioChangeEvent } from "antd";
-import { Form, Radio, Space, Switch, Table } from "antd";
-import type { SizeType } from "antd/es/config-provider/SizeContext";
+import { FC, useState } from "react";
+import { Table } from "antd";
 import type { ColumnsType, TableProps } from "antd/es/table";
-import type {
-  ExpandableConfig,
-  TableRowSelection,
-} from "antd/es/table/interface";
+import type { ExpandableConfig } from "antd/es/table/interface";
 
 import "./table.scss";
 

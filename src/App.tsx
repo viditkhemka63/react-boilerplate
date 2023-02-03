@@ -11,8 +11,6 @@ function App() {
         token: {
           colorBgContainer: "#1c1c1e",
           colorBgElevated: "#eeeeee",
-
-          //           colorPrimary: "#1c1c1e",
         },
       }}
     >
