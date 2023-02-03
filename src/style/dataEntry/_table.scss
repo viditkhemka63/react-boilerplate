@@ -1,0 +1,29 @@
+@import "../variables";
+
+.ant-table-filter-dropdown {
+  background-color: $white !important;
+}
+
+.ant-table-filter-dropdown-btns {
+  border-top: 1px solid $b-20 !important;
+}
+
+.ant-table-wrapper .ant-table-thead {
+  tr {
+    td {
+      color: $white !important;
+    }
+  }
+}
+
+.ant-dropdown-menu-submenu-title-selected {
+  color: $primary-1 !important;
+  background-color: rgba($primary-1, 0.02) !important;
+}
+
+.ant-dropdown-menu-submenu
+  .ant-dropdown-menu
+  .ant-dropdown-menu-submenu-title-selected {
+  color: $primary-1 !important;
+  background-color: rgba($primary-1, 0.02) !important;
+}

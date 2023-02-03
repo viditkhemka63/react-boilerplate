@@ -1,6 +1,7 @@
 import { ConfigProvider } from "antd";
 import "./App.css";
 import Spinner from "./components/common/Spinner";
+import { TableComponent } from "./components/common/table";
 import { MainLayout } from "./components/layout";
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
       <div>
         <MainLayout>
           <h1>Cockpit view</h1>
+          <TableComponent />
         </MainLayout>
       </div>
     </ConfigProvider>

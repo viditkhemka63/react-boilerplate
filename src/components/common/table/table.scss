@@ -1,0 +1,80 @@
+@import "../../../style/variables";
+
+// 292929 body
+
+// 292929
+.table-wrapper {
+  tr {
+    th {
+      color: $white !important;
+    }
+    td {
+      color: $white !important;
+    }
+  }
+
+  .anticon {
+    color: $white !important;
+  }
+
+  .ant-table-filter-trigger {
+    &:hover {
+      color: #fff;
+      background-color: $b-40;
+    }
+  }
+
+  .ant-table-row-expand-icon {
+    color: $white;
+
+    &:hover {
+      color: $primary-1;
+    }
+  }
+  .ant-table-thead {
+    background: $b-80;
+    tr {
+      th {
+        border-bottom: 1px solid $b-40;
+        &::before {
+          background: $b-40 !important;
+        }
+      }
+      td {
+        border-bottom: 1px solid $b-40;
+        &::before {
+          background: $b-40 !important;
+        }
+      }
+    }
+  }
+  .ant-table-tbody {
+    background: $b-80;
+    tr {
+      td {
+        border-top: 1px solid $b-40 !important;
+        border-bottom: 1px solid $b-40 !important;
+
+        &::before {
+          background: $b-40;
+        }
+      }
+      &:hover {
+        background-color: rgba($primary-1, 0.02) !important;
+        color: #fff !important;
+        td {
+          background-color: rgba($primary-1, 0.02) !important;
+          color: #fff !important;
+        }
+      }
+    }
+  }
+  .ant-pagination {
+    .ant-pagination-item-active {
+      border-color: $primary-1;
+      a {
+        color: $primary-1;
+      }
+    }
+  }
+}
