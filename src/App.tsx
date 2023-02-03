@@ -1,6 +1,7 @@
-import { Button, ConfigProvider } from "antd";
+import { ConfigProvider } from "antd";
 import "./App.css";
-import Sidebar from "./components/layout/sidebar/sidebar";
+import Spinner from "./components/common/Spinner";
+import { MainLayout } from "./components/layout";
 
 function App() {
   return (
@@ -15,9 +16,9 @@ function App() {
       }}
     >
       <div>
-        <Sidebar>
+        <MainLayout>
           <h1>Cockpit view</h1>
-        </Sidebar>
+        </MainLayout>
       </div>
     </ConfigProvider>
   );

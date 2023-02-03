@@ -1,21 +1,5 @@
 @import "../../../style/variables";
 
-.layout-main {
-  margin-left: 80px;
-
-  .header {
-    display: flex;
-    flex-direction: row;
-
-    padding-inline: 16px;
-    .title {
-      font-size: $h4-font-size;
-      font-weight: $font-weight-medium;
-      color: $white;
-    }
-  }
-}
-
 .sidebar-content-wrapper {
   display: flex;
   flex-direction: column;
