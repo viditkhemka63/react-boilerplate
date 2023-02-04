@@ -1,6 +1,8 @@
 import { LoginPage } from "../modules/auth/components/Login";
 import { CockpitPage } from "../modules/cockpit/components/Cockpit";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import PublicRoute from "./public";
+import PrivateRoute from "./private";
 
 const Router = () => (
   <BrowserRouter>
@@ -8,12 +10,19 @@ const Router = () => (
       <Route
         path="/auth/login"
         element={
-          // <PublicRoute>
-          <LoginPage />
-          // </PublicRoute>
+          <PublicRoute>
+            <LoginPage />
+          </PublicRoute>
         }
       />
-      <Route path="/cockpit" element={<CockpitPage />} />
+      <Route
+        path="/cockpit"
+        element={
+          <PrivateRoute>
+            <CockpitPage />
+          </PrivateRoute>
+        }
+      />
     </Routes>
   </BrowserRouter>
 );

@@ -1,5 +1,5 @@
 import { AxiosResponse } from "axios";
-import { LoggerService } from "@/common/services/logger.service";
+import { LoggerService } from "src/common/services/logger.service";
 
 export const ResponseInterceptor = (response: AxiosResponse): any => {
   LoggerService.debugg(response);

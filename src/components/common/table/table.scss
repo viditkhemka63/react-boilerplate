@@ -1,8 +1,5 @@
 @import "../../../style/variables";
 
-// 292929 body
-
-// 292929
 .table-wrapper {
   tr {
     th {
@@ -59,11 +56,19 @@
           background: $b-40;
         }
       }
+
+      &:nth-child(even) {
+        background-color: rgba($primary-3, 0.01) !important;
+        td {
+          background-color: rgba($primary-3, 0.01) !important;
+        }
+      }
+
       &:hover {
-        background-color: rgba($primary-1, 0.02) !important;
+        background-color: rgba($primary-1, 0.06) !important;
         color: #fff !important;
         td {
-          background-color: rgba($primary-1, 0.02) !important;
+          background-color: rgba($primary-1, 0.06) !important;
           color: #fff !important;
         }
       }

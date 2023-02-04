@@ -1,13 +1,16 @@
-import { ApiService } from "@/common/services/api.service";
-import { LoggerService } from "@/common/services/logger.service";
-import { APIS } from "@/config/api";
+import { ApiService } from "src/common/services/api.service";
+import { LoggerService } from "src/common/services/logger.service";
+import { APIS } from "src/config/api";
 
-class AuthService {
-  static async login(email: string, password: string) {
-    const body: any = {
-      email,
-      password,
-    };
+export class AuthService {
+  static async login(body: { email: string; password: string }) {
+    // return new Promise((resolve, reject) => {
+    //   // if (email !== "user" || password !== "user") {
+    //   //   reject("Invalid username or password");
+    //   // }
+
+    //   setTimeout(() => resolve(true), 2000);
+    // });
 
     const res: any = await ApiService.post(APIS.LOGIN, body);
     LoggerService.debugg("API Res:", res);
@@ -16,5 +19,3 @@ class AuthService {
 
   logout() {}
 }
-
-export {};

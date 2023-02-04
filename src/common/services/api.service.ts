@@ -2,14 +2,15 @@ import Axios, { AxiosInstance } from "axios";
 import {
   ResponseErrorInterceptor,
   ResponseInterceptor,
-} from "@/common/interceptors/response";
+} from "src/common/interceptors/response";
 import {
   AxiosRequestErrorInterceptor,
   AxiosRequestInterceptor,
-} from "@/common/interceptors/request";
+} from "src/common/interceptors/request";
+import { env } from "src/environments/enviroment";
 
 const HttpClient: AxiosInstance = Axios.create({
-  baseURL: process.env.base_url,
+  baseURL: env.api,
   headers: {
     Accept: "application/json",
     "Content-Type": "application/json",
@@ -30,7 +31,7 @@ class ApiServiceClass {
   constructor(private http: AxiosInstance, private apiUrl: string) {}
 
   getPath(path: string) {
-    return `${this.apiUrl}/${path}`;
+    return `${path}`;
   }
 
   get(path: string, params: any) {

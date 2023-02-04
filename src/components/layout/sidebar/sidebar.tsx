@@ -64,7 +64,11 @@ export const Sidebar: React.FC<SidebarProps> = ({}: SidebarProps) => {
           mode="inline"
           items={sidebarMenuList}
         />
-        <Dropdown menu={{ items: avatarMenuItems }} trigger={["click"]}>
+        <Dropdown
+          placement="topLeft"
+          menu={{ items: avatarMenuItems }}
+          trigger={["click"]}
+        >
           <div className="avatar-wrapper">
             <Avatar
               style={{
