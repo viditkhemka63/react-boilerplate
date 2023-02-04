@@ -25,7 +25,8 @@
     "build": "react-scripts build --stats",
     "analyze": "webpack-bundle-analyzer build/bundle-stats.json",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "gen": "plop"
   },
   "eslintConfig": {
     "extends": [
@@ -46,6 +47,7 @@
     ]
   },
   "devDependencies": {
+    "plop": "^3.1.1",
     "webpack-bundle-analyzer": "^4.7.0"
   }
 }

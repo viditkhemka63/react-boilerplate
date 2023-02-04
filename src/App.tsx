@@ -3,6 +3,7 @@ import "./App.css";
 import Spinner from "./components/common/Spinner";
 import { TableComponent } from "./components/common/table";
 import { MainLayout } from "./components/layout";
+import Router from "./routes/routes";
 
 function App() {
   return (
@@ -15,10 +16,7 @@ function App() {
       }}
     >
       <div>
-        <MainLayout>
-          <h1>Cockpit view</h1>
-          <TableComponent />
-        </MainLayout>
+        <Router />
       </div>
     </ConfigProvider>
   );
