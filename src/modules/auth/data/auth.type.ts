@@ -11,5 +11,7 @@ export enum IAuthAction {
 }
 
 export interface IAuthStore extends IStore {
-  state: IAuthState;
+  isAuthenticated: boolean;
+  token: string | null;
+  user: any;
 }

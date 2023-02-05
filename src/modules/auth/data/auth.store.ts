@@ -1,7 +1,8 @@
 import { IAction } from "src/types/store";
 import { create } from "zustand";
 import { IAuthAction, IAuthState, IAuthStore } from "./auth.type";
-import { persist } from "zustand/middleware";
+import { persist, createJSONStorage } from "zustand/middleware";
+import { immer } from "zustand/middleware/immer";
 
 const DEFAULT_AUTH_STATE: IAuthState = {
   isAuthenticated: false,
@@ -9,31 +10,25 @@ const DEFAULT_AUTH_STATE: IAuthState = {
   user: {},
 };
 
-const reducer = (state: IAuthState, action: IAction) => {
+const reducer = (state: IAuthStore, action: IAction) => {
   const { type, payload } = action;
 
-  console.log("State in reducer is::", state);
   switch (type) {
     case IAuthAction.INIT:
       return {
-        state: {
-          ...state,
-          ...payload,
-        },
+        ...state,
+        ...payload,
       };
 
     case IAuthAction.PURGE:
       return {
-        state: {
-          ...DEFAULT_AUTH_STATE,
-        },
+        ...state,
+        ...DEFAULT_AUTH_STATE,
       };
 
     default: {
       return {
-        state: {
-          ...state,
-        },
+        ...state,
       };
     }
   }
@@ -41,12 +36,15 @@ const reducer = (state: IAuthState, action: IAction) => {
 
 export const AuthStore = create<IAuthStore>()(
   persist(
-    (set) => ({
-      state: DEFAULT_AUTH_STATE,
-      dispatch: (payload) => set((store) => reducer(store.state, payload)),
-    }),
+    immer((set) => ({
+      isAuthenticated: DEFAULT_AUTH_STATE.isAuthenticated,
+      token: DEFAULT_AUTH_STATE.token,
+      user: DEFAULT_AUTH_STATE.user,
+      dispatch: (payload: any) => set((state) => reducer(state, payload)),
+    })),
     {
       name: "auth",
+      storage: createJSONStorage(() => sessionStorage),
     }
   )
 );

@@ -7,6 +7,7 @@ import {
 import { Dropdown, MenuProps } from "antd";
 import { Layout, Menu, Avatar } from "antd";
 import "./sidebar.scss";
+import { useAuth } from "src/modules/auth/data/useAuth";
 const { Sider } = Layout;
 
 type MenuItem = Required<MenuProps>["items"][number];
@@ -37,6 +38,7 @@ const sidebarMenuList: MenuItem[] = [
 interface SidebarProps {}
 
 export const Sidebar: React.FC<SidebarProps> = ({}: SidebarProps) => {
+  const { handleLogout } = useAuth();
   const [collapsed] = useState(true);
 
   return (

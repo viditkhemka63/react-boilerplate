@@ -8,15 +8,15 @@ import { AuthStore } from "./auth.store";
 import { ROUTES } from "src/config/routes";
 
 export const useAuth = () => {
-  const { state, dispatch } = AuthStore();
+  const { isAuthenticated, user, dispatch } = AuthStore();
   const navigate = useNavigate();
   const location = useLocation();
 
   useEffect(() => {
-    const unsub = AuthStore.subscribe((store: IAuthStore) => {
+    const unsub = AuthStore.subscribe((state: IAuthStore) => {
       console.log("Location is ", location.pathname);
       const currentRoute: string = location.pathname;
-      const { isAuthenticated } = store.state;
+      const { isAuthenticated } = state;
 
       if (isAuthenticated && currentRoute === ROUTES.AUTH.LOGIN) {
         navigate(ROUTES.COCKPIT.LIST);
@@ -70,7 +70,8 @@ export const useAuth = () => {
   };
 
   return {
-    ...state,
+    isAuthenticated,
+    user,
     loginState: {
       isLoading,
       isError,
